@@ -1,22 +1,35 @@
-.login-wrap{
+.create-profile-wrap{
     margin-top:30px;
     border:1px solid #ccc;
     box-shadow: 0px 0px 3px #ccc;
     padding-top:50px;
-    padding-bottom:50px;
-    border-radius: 3px;    
+    padding-bottom:30px;
+    border-radius: 3px;
 }
 
-.login-with,.email-password{
-    padding-left:30px;
-    padding-right: 30px;
-}
+/* individual: webkit */
+::-webkit-input-placeholder { color:#333; }
+.txt-team::-webkit-input-placeholder { font-style:italic; color:#999; }
+.txt-company::-webkit-input-placeholder { font-style:italic; color:#999; }
 
-.email-password{
-    border-right: 1px solid #ccc;
-    padding-left: 60px;
+/* individual: mozilla */
+::-moz-placeholder { color:#333;}
+.txt-team::-moz-placeholder { font-style:italic; color:#999; }
+.txt-company::-moz-placeholder { font-style:italic; color:#999; }
+.plus{
+    position: relative;
 }
-
+.plus img{
+    position: absolute;
+    top:5px;
+    right:-12px;
+    cursor: pointer;
+}
+.info{
+    margin-left:3px;
+    margin-top:-15px;
+    cursor: pointer;
+}
 .btn-social{position:relative;padding-left:30px;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.btn-social :first-child{position:absolute;left:0;top:0;bottom:0;width:32px;line-height:34px;font-size:1.6em;text-align:center;}
 .btn-social.btn-lg{padding-left:61px}.btn-social.btn-lg :first-child{line-height:45px;width:45px;font-size:1.8em}
 .btn-social.btn-sm{padding-left:38px}.btn-social.btn-sm :first-child{line-height:28px;width:28px;font-size:1.4em}
@@ -66,15 +79,10 @@
 .btn-vk:active,.btn-vk.active,.open .dropdown-toggle.btn-vk{background-image:none}
 .btn-vk.disabled,.btn-vk[disabled],fieldset[disabled] .btn-vk,.btn-vk.disabled:hover,.btn-vk[disabled]:hover,fieldset[disabled] .btn-vk:hover,.btn-vk.disabled:focus,.btn-vk[disabled]:focus,fieldset[disabled] .btn-vk:focus,.btn-vk.disabled:active,.btn-vk[disabled]:active,fieldset[disabled] .btn-vk:active,.btn-vk.disabled.active,.btn-vk[disabled].active,fieldset[disabled] .btn-vk.active{background-color:#587ea3;border-color:rgba(0,0,0,0.2)}
 
-.btn-register,.btn-login{
-    margin-top:35px;
-    padding-left:10px;
+
+.btn-add-picture{
+    margin-top:20px;
 }
-.with-google{
+.btn-register{
     margin-top:14px;
-}
-@media screen and (max-width: 480px) {
-    .email-password{
-        padding-left: 30px;
-    }
 }

@@ -5,10 +5,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { AppRoutingModule }     from './app.routes';
+import { CreateProfileComponent } from './createprofile/createprofile.component';
+import { CreateCompanyComponent } from './createcompany/createcompany.component';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    CreateProfileComponent,
+    CreateCompanyComponent
   ],
   imports: [
     BrowserModule,

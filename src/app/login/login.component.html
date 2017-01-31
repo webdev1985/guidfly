@@ -1,18 +1,49 @@
-<div class="col-md-6 col-md-offset-3">
-    <h2>Login</h2>
-    <form name="form">
-        <div class="form-group">
-            <label for="username">Username</label>
-            <input type="text" class="form-control" name="username"/>
-            <!--<div *ngIf="f.submitted && !username.valid" class="help-block">Username is required</div>-->
+<div class="col-md-6 col-sm-8 col-sm-offset-2 col-md-offset-3 login-wrap">
+    <div class="row">
+        <div class="col-sm-6 email-password" >
+            <form name="form" (ngSubmit) = "onSubmit(f)" #f="ngForm">
+                <div ngModelGroup="userData">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" 
+                                class="form-control" 
+                                [(ngModel)] = "user.email" 
+                                name="email" 
+                                required
+                                pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" 
+                                #email = "ngModel"
+                        />
+                        <div *ngIf="f.submitted && !email.valid" class="help-block">email is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" 
+                                class="form-control" 
+                                [(ngModel)] = "user.password"
+                                name="password" 
+                                required
+                                #password = "ngModel"
+                        />
+                        <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-block btn-success btn-login" value="Login" [disabled]="!f.valid" /> 
+                    </div>
+                    <div class="form-group">
+                        <input type="button" class="btn btn-block btn-pinterest btn-register" value="Register" [routerLink] = "['/profile']" /> 
+                    </div>
+                </div>
+            </form>
         </div>
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" name="password"/>
-            <!--<div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>-->
+        <div class="col-sm-6 login-with">
+            <label for="email">&nbsp;</label>
+            <a class="btn btn-block btn-social btn-facebook with-facebook">
+                <i class="fa fa-facebook"></i> Login with Facebook
+            </a>
+            <label for="email">&nbsp;</label>
+            <a class="btn btn-block btn-social btn-google-plus with-google">
+                <i class="fa fa-google-plus"></i> Login with Google
+            </a>
         </div>
-        <div class="form-group">
-            <button class="btn btn-primary">Login</button>
-        </div>
-    </form>
+    </div>
 </div>
