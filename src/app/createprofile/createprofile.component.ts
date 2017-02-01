@@ -3,7 +3,7 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-createprofile',
   templateUrl: './createprofile.component.html',
-  styleUrls: ['./createprofile.component.css']
+  styleUrls: ['./createprofile.component.css','../../assets/css/style.css']
 })
 export class CreateProfileComponent implements OnInit {
 
